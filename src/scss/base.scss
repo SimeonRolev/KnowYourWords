@@ -1,0 +1,15 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import "~bootstrap/scss/bootstrap";
+@import './variables';
+@import './common';
+@import './list-item';
+@import './dialog';
+@import './google-translator';
+
+body {
+    font-size: 16px;
+}
+
+label {
+    margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.list-item {
+    @include active-hover;
+
+    text-align: start;
+    line-height: 42px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid transparent;
+
+    [class^='col-'] {
+        @include text-collapse;
+    }
+}

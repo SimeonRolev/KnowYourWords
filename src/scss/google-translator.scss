@@ -1,0 +1,21 @@
+@import "./mixins";
+
+.google-input {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    .input--default {
+        flex: 1;
+        margin-right: 0;
+    }
+
+    #btn-google-trans {
+        flex: 1 0 auto;
+        margin-right: 0;
+    }
+}
+
+.notes {
+    @include box-props;
+    margin: 0;
+}
