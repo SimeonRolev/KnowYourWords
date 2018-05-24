@@ -1,5 +1,5 @@
-# React-Django app
-Simple setup for a React-Django web app. See tutorial here: https://medium.com/@nicholaskajoh/heres-a-dead-simple-react-django-setup-for-your-next-project-c0b0036663c6.
+# Know your words (React-Django app)
+Project for keeping track of your new words. Simple setup for a React-Django web app. See tutorial here: https://medium.com/@nicholaskajoh/heres-a-dead-simple-react-django-setup-for-your-next-project-c0b0036663c6.
 
 ## Setup
 - Download/clone repo.
