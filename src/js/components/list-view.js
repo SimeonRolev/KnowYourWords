@@ -26,8 +26,7 @@ class Translation extends React.Component {
     delete (e, id) {
         e.stopPropagation();
         this.props.deleteTranslation(id);
-        // api.deleteTranslation(id);
-        alert('Activete the api call to really delete the record')
+        api.deleteTranslation(id);
     }
 
     edit (e) {
@@ -84,9 +83,8 @@ class EditTranslationDialog extends React.Component {
 
     handleInput (e) {
         const val = e.target.value;
-        // val && this.setState({ input: val });
-        // console.log(val);
         this.input = val;
+        // val && this.setState({ input: val });
     }
 
     handleOutput (e) {

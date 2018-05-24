@@ -48,7 +48,7 @@ class GoogleTranslator extends React.Component {
         }, {
             headers: {"X-CSRFToken": Cookies.get('csrftoken')}
         }).then(res => {
-            alert("Saved successfully!")
+            window.location.reload();
         })
     };
 

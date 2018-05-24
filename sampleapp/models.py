@@ -8,7 +8,8 @@ class Translation(models.Model):
     notes = models.CharField(max_length=500, null=True, blank=True)
     input_lang = models.CharField(max_length=10)
     output_lang = models.CharField(max_length=10)
+    last_modified = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ('input',)
+        ordering = ('-last_modified',)
