@@ -26,11 +26,10 @@ class GoogleTranslator extends React.Component {
             "to": this.state.outputLang
         })
             .then(function (response) {
-                console.log(response);
                 self.setState({showResults: true, result: response.data.text});
             })
             .catch(function (error) {
-                console.log(error);
+                alert('Error: ' + error)
             });
     };
 

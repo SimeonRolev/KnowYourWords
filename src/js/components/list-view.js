@@ -54,9 +54,9 @@ class Translation extends React.Component {
                 </div>
                 {viewNotes &&
                 <div className="pad-top-7">
-                     <textarea rows="5"
+                     <textarea disabled rows="5"
                                className="notes pad-top-7 col-12"
-                               placeholder="Add some notes?"
+                               placeholder="You did not add any notes. Edit?"
                                value={this.notes}
                                onBlur={this.changeNotes}>
                      </textarea>
