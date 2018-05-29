@@ -28,17 +28,10 @@ class Translation extends React.Component {
     }
 
     edit (e) {
-        const {
-            input,
-            output,
-            notes,
-            id,
-            user
-        } = this.props;
+        const { input, output, notes, id } = this.props;
 
         e.stopPropagation();
-        this.props.openEditDialog(Object.assign({}, {input, output, notes, id, user
-        }));
+        this.props.openEditDialog(Object.assign({}, { input, output, notes, id }));
     }
 
     render () {

@@ -64,9 +64,11 @@ class EditTranslationDialog extends React.Component {
                 <div className="dialog" id="edit-dialog">
                     <input className="input--default" defaultValue={this.props.input} onChange={this.handleInput} />
                     <input className="input--default" defaultValue={this.props.output} onChange={this.handleOutput} />
-                    <input className="input--default" defaultValue={this.props.notes} onChange={this.handleNotes} />
-                    <button className="btn--default" onClick={this.submit}>Submit</button>
-                    <button className="btn--default" onClick={this.close}>Cancel</button>
+                    <textarea rows="5" className="textarea--default" defaultValue={this.props.notes} onChange={this.handleNotes} />
+                    <div className="dialog-buttons">
+                        <button className="btn--default" onClick={this.submit}>Submit</button>
+                        <button className="btn--default" onClick={this.close}>Cancel</button>
+                    </div>
                 </div>
             </div>
         )
