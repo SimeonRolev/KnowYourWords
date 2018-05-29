@@ -11,11 +11,13 @@ const api = {
             .catch(err => console.log(err))
     },
     updateTranslation: function(id, data) {
-        return axios.put(`/api/translations/${id}/`, data, {
+        const { input, output, notes } = data;
+
+        return axios.patch(`/api/translations/${id}/`, {input, output, notes}, {
             headers: {"X-CSRFToken": Cookies.get('csrftoken')}
         })
             .then(res => alert("Updated successfully!"))
-            .catch(err => alert("Updated failed!"))
+            .catch(err => { alert("Updated failed!"); console.log(err) })
     }
 };
 
