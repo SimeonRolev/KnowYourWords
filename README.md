@@ -3,12 +3,9 @@ Project for keeping track of your new words. Simple setup for a React-Django web
 
 ## Setup
 - Download/clone repo.
-- Create and activate a virtual environment.
-- Install Django with `pip install django`.
-- Run Django app using `python manage.py runserver`.
-- Install React dependencies with `npm install`. 
-- Run React app with `npm start`.
-- Build React app using `npm run build`.
-
-## Deploy
-Read a tutorial on deploying this app to Heroku here: https://medium.com/@nicholaskajoh/deploy-your-react-django-app-on-heroku-335af9dab8a3.
+- Create virtual environment
+- Run pip install -r requirements.txt
+- Run npm install
+- Run python manage.py runserver
+- Open http://localhost:8000/signup/
+- Create an account and start adding your words!

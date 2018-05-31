@@ -51,7 +51,7 @@
   "scripts": {
     "scss": "node-sass src/App.scss > src/App.css",
     "start": "node scripts/start.js",
-    "build": "npm run scss && node scripts/build.js",
+    "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "postinstall": "npm run build"
   },
