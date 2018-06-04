@@ -15,6 +15,9 @@ class App extends Component {
                     <h1 className="App-title">Welcome to Know your words</h1>
                 </header>
                 <div className="content">
+                    <button className="btn--default"
+                            style={{position: 'absolute', top: 10, right: 10}}
+                            onClick={function () {window.location.href = "/logout/"}}>Logout</button>
                     <GoogleTranslator />
                     <TranslationsList />
                 </div>
