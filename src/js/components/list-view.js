@@ -12,7 +12,8 @@ class TranslationsList extends React.Component {
         hideWords: false,
         hideTrans: false,
         editTranslationDialog: false,
-        editDialogData: {}
+        editDialogData: {},
+        latestFirst: true
     }
 
     constructor () {
@@ -26,6 +27,7 @@ class TranslationsList extends React.Component {
         this.openEditDialog = this.openEditDialog.bind(this);
         this.closeEditDialog = this.closeEditDialog.bind(this);
         this.editTranslation = this.editTranslation.bind(this);
+        this.sortByLastModified = this.sortByLastModified.bind(this);
     }
 
     componentDidMount () {
@@ -84,8 +86,26 @@ class TranslationsList extends React.Component {
         });
     }
 
+    sortByLastModified () {
+        this.setState((state) => {
+            return state.latestFirst
+                ? {
+                    translations: state.translations.sort((a, b) => {
+                            return new Date(a.last_modified) - new Date(b.last_modified);
+                        }),
+                    latestFirst: false
+                }
+                : {
+                    translations: state.translations.sort((a, b) => {
+                            return new Date(b.last_modified) - new Date(a.last_modified);
+                        }),
+                    latestFirst: true
+                };
+        })
+    }
+
     render () {
-        const {translations, editTranslationDialog, editDialogData} = this.state;
+        const {translations, editTranslationDialog, editDialogData, latestFirst} = this.state;
 
         const transList = translations
         // key={t.id} not working, although it's unique.
@@ -103,6 +123,7 @@ class TranslationsList extends React.Component {
                     <button className="btn--default" onClick={this.hideWords}>Hide words</button>
                     <button className="btn--default" onClick={this.hideTrans}>Hide translations</button>
                     <button className="btn--default" onClick={this.showWords}>Show both</button>
+                    <button className="btn--default" onClick={this.sortByLastModified}>{latestFirst ? 'Oldest first' : 'Latest first'}</button>
                 </div>
                 <div className="row pad-top-7">{transList}</div>
                 {editTranslationDialog &&
